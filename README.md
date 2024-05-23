@@ -8,11 +8,12 @@ A boilerplate for myself containing the tools I use the most; I'm not sure which
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Shadcn UI](https://ui.shadcn.com/)
 - [PostHog](https://posthog.com/) for product and website analytics
+- [Sentry](https://sentry.io/) for error and performance monitoring
 
 ### TODO
 
 - [x] Add Posthog
-- [ ] Add Sentry
+- [x] Add Sentry
 - [x] Add Shadcn-ui
 - [ ] Add an ORM
 - [ ] Add Authentication
