@@ -7,10 +7,11 @@ A boilerplate for myself containing the tools I use the most; I'm not sure which
 - [Next.js](https://nextjs.org/) with [App Router](https://nextjs.org/docs/app)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Shadcn UI](https://ui.shadcn.com/)
+- [PostHog](https://posthog.com/) for product and website analytics
 
 ### TODO
 
-- [ ] Add Posthog
+- [x] Add Posthog
 - [ ] Add Sentry
 - [x] Add Shadcn-ui
 - [ ] Add an ORM
