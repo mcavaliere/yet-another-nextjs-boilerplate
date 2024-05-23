@@ -4,23 +4,22 @@ A boilerplate for myself containing the tools I use the most; I'm not sure which
 
 ## Current Tech Stack
 
-- Next.js App Router
-- Tailwind CSS
+- [Next.js](https://nextjs.org/) with [App Router](https://nextjs.org/docs/app)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Shadcn UI](https://ui.shadcn.com/)
 
 ### TODO
 
 - [ ] Add Posthog
 - [ ] Add Sentry
-- [ ] Add Shadcn-ui
+- [x] Add Shadcn-ui
 - [ ] Add an ORM
 - [ ] Add Authentication
 - [ ] Add Vitest
 - [ ] Add Playwright
 - [ ] Add a landing page template
 
-
 ## Installation
-
 
 1. Clone the repo
 2. `pnpm install`
@@ -30,3 +29,4 @@ A boilerplate for myself containing the tools I use the most; I'm not sure which
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+```
