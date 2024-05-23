@@ -9,6 +9,7 @@ A boilerplate for myself containing the tools I use the most; I'm not sure which
 - [Shadcn UI](https://ui.shadcn.com/)
 - [PostHog](https://posthog.com/) for product and website analytics
 - [Sentry](https://sentry.io/) for error and performance monitoring
+- [Vitest](https://vitest.dev/) and [React Testing Library](https://testing-library.com/) for unit tests.
 
 ### TODO
 
@@ -16,10 +17,13 @@ A boilerplate for myself containing the tools I use the most; I'm not sure which
 - [x] Add Sentry
 - [x] Add Shadcn-ui
 - [ ] Add an ORM
+- [ ] Add transactional emails & `jsx-email`
 - [ ] Add Authentication
-- [ ] Add Vitest
+- [x] Add Vitest
 - [ ] Add Playwright
 - [ ] Add a landing page template
+- [ ] Add GitHub Actions CI setup
+- [ ] Add Stripe or Lemon Squeezy
 
 ## Installation
 
