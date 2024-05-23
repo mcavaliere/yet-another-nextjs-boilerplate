@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
+import "./landing.css";
 import { cn } from "@/lib/utils";
 import { PostHogProvider } from "./providers";
 import dynamic from "next/dynamic";
