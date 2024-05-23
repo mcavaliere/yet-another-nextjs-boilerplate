@@ -19,6 +19,7 @@ A boilerplate for myself containing the tools I use the most; I'm not sure which
 - [ ] Add an ORM
 - [ ] Add transactional emails & `jsx-email`
 - [ ] Add Authentication
+- [ ] Add object storage
 - [x] Add Vitest
 - [ ] Add Playwright
 - [ ] Add a landing page template
