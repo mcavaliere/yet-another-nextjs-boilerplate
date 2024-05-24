@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
+import dynamic from "next/dynamic";
 import { Inter as FontSans } from "next/font/google";
+import { cn } from "@/lib/utils";
+import { ClerkProvider } from "@clerk/nextjs";
+import { PostHogProvider } from "../providers/PostHogProvider";
+import { ThemeProvider } from "@/providers/ThemeProvider";
 import "./globals.css";
 import "./landing.css";
-import { cn } from "@/lib/utils";
-import { PostHogProvider } from "../providers/PostHogProvider";
-import dynamic from "next/dynamic";
-import { ThemeProvider } from "@/providers/ThemeProvider";
 
 const PostHogPageView = dynamic(() => import("../components/PostHogPageView"), {
   ssr: false,
@@ -28,18 +28,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <PostHogProvider>
-        <body
-          className={cn(
-            "min-h-screen bg-background font-sans antialiased",
-            fontSans.variable
-          )}
-        >
-          <PostHogPageView />
-          <ThemeProvider attribute="class">{children}</ThemeProvider>
-        </body>
-      </PostHogProvider>
-    </html>
+    <ClerkProvider>
+      <html lang="en" suppressHydrationWarning>
+        <PostHogProvider>
+          <body
+            className={cn(
+              "min-h-screen bg-background font-sans antialiased",
+              fontSans.variable
+            )}
+          >
+            <PostHogPageView />
+            <ThemeProvider attribute="class">{children}</ThemeProvider>
+          </body>
+        </PostHogProvider>
+      </html>
+    </ClerkProvider>
   );
 }

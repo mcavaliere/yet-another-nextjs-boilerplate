@@ -5,9 +5,10 @@ A boilerplate for myself containing the tools I use the most; I'm not sure which
 ## Current Tech Stack
 
 - [Next.js](https://nextjs.org/) with [App Router](https://nextjs.org/docs/app)
-- [Tailwind CSS](https://tailwindcss.com/)
+- [Tailwind CSS](https://tailwindcss.com/) for styling
+- [Shadcn UI](https://ui.shadcn.com/) for UI elements
 - [Prisma ORM](https://www.prisma.io/) with [PostgreSQL](https://www.postgresql.org/) database
-- [Shadcn UI](https://ui.shadcn.com/)
+- [Clerk](https://clerk.com/) for authentication and user management
 - [PostHog](https://posthog.com/) for product and website analytics
 - [Sentry](https://sentry.io/) for error and performance monitoring
 - [Vitest](https://vitest.dev/) and [React Testing Library](https://testing-library.com/) for unit tests.
@@ -21,7 +22,7 @@ A boilerplate for myself containing the tools I use the most; I'm not sure which
 - [x] Add Shadcn-ui
 - [x] Add an ORM
 - [ ] Add transactional emails & `jsx-email`
-- [ ] Add Authentication
+- [x] Add Authentication
 - [ ] Add object storage
 - [x] Add Vitest
 - [x] Add Playwright
@@ -31,9 +32,18 @@ A boilerplate for myself containing the tools I use the most; I'm not sure which
 
 ## Installation
 
+First, create accounts for the services you want to use. You'll need API keys for each in step #3 below.
+
+- [PostHog](https://posthog.com/)
+- [Sentry](https://sentry.io/)
+- [Clerk](https://clerk.com/)
+
+Then:
+
 1. Clone the repo
 2. `pnpm install`
-3. `pnpm dev` to start the server.
+3. Copy `.env.example` to `.env.local` and fill in the required values (incl those API keys from above).
+4. `pnpm dev` to start the server.
 
 ```
 
