@@ -38,3 +38,9 @@ A boilerplate for myself containing the tools I use the most; I'm not sure which
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ```
+
+## Running E2E Tests
+
+1. `pnpm build:test` to create a production build (with NODE_ENV=test)
+2. `pnpm test:e2e` to run the tests.
+3. Optionally `pnpm test:e2e:ui` to run Playwright in UI mode.
