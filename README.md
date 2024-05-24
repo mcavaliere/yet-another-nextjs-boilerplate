@@ -6,6 +6,7 @@ A boilerplate for myself containing the tools I use the most; I'm not sure which
 
 - [Next.js](https://nextjs.org/) with [App Router](https://nextjs.org/docs/app)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [Prisma ORM](https://www.prisma.io/) with [PostgreSQL](https://www.postgresql.org/) database
 - [Shadcn UI](https://ui.shadcn.com/)
 - [PostHog](https://posthog.com/) for product and website analytics
 - [Sentry](https://sentry.io/) for error and performance monitoring
@@ -18,7 +19,7 @@ A boilerplate for myself containing the tools I use the most; I'm not sure which
 - [x] Add Posthog
 - [x] Add Sentry
 - [x] Add Shadcn-ui
-- [ ] Add an ORM
+- [x] Add an ORM
 - [ ] Add transactional emails & `jsx-email`
 - [ ] Add Authentication
 - [ ] Add object storage
