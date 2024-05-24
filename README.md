@@ -10,6 +10,7 @@ A boilerplate for myself containing the tools I use the most; I'm not sure which
 - [PostHog](https://posthog.com/) for product and website analytics
 - [Sentry](https://sentry.io/) for error and performance monitoring
 - [Vitest](https://vitest.dev/) and [React Testing Library](https://testing-library.com/) for unit tests.
+- [Playwright](https://playwright.dev/) for E2E tests.
 - Landing page template from [shadcn-landing-page](https://github.com/leoMirandaa/shadcn-landing-page)
 
 ### TODO
@@ -22,7 +23,7 @@ A boilerplate for myself containing the tools I use the most; I'm not sure which
 - [ ] Add Authentication
 - [ ] Add object storage
 - [x] Add Vitest
-- [ ] Add Playwright
+- [x] Add Playwright
 - [x] Add a landing page template
 - [ ] Add GitHub Actions CI setup
 - [ ] Add Stripe or Lemon Squeezy
