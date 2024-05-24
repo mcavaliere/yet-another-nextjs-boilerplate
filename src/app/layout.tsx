@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import "./landing.css";
@@ -27,19 +28,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <PostHogProvider>
-        <ThemeProvider attribute="class">
-          <body
-            className={cn(
-              "min-h-screen bg-background font-sans antialiased",
-              fontSans.variable
-            )}
-          >
-            <PostHogPageView />
-            {children}
-          </body>
-        </ThemeProvider>
+        <body
+          className={cn(
+            "min-h-screen bg-background font-sans antialiased",
+            fontSans.variable
+          )}
+        >
+          <PostHogPageView />
+          <ThemeProvider attribute="class">{children}</ThemeProvider>
+        </body>
       </PostHogProvider>
     </html>
   );
