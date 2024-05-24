@@ -20,11 +20,7 @@ import {
   anchor,
 } from "./emailStyles";
 
-// Note: Superstruct is a fantastic validation package. It's smaller and faster than alternatives
-// and uses a delightful API without chaining. docs.superstructjs.org
-//
-// To install `superstruct` run `pnpm add superstruct`.
-import { defaulted, number, object, string, type Infer } from "superstruct";
+import { defaulted, object, string, type Infer } from "superstruct";
 import * as React from "react";
 
 export const TemplateName = "WelcomeEmail";

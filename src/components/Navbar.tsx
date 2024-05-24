@@ -1,13 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import {
-  ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from "@clerk/nextjs";
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import {
   NavigationMenu,
   NavigationMenuItem,

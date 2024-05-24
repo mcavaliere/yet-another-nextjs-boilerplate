@@ -7,6 +7,7 @@ import { PostHogProvider } from "../providers/PostHogProvider";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import "./globals.css";
 import "./landing.css";
+import { SITE_NAME } from "@/lib/constants";
 
 const PostHogPageView = dynamic(() => import("../components/PostHogPageView"), {
   ssr: false,
@@ -18,7 +19,7 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "Y(et)A(nother)N(ext)B(oilerplate)",
+  title: SITE_NAME,
   description: "A Next.js starter kit by Mike Cavaliere",
 };
 
