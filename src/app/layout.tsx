@@ -3,8 +3,9 @@ import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import "./landing.css";
 import { cn } from "@/lib/utils";
-import { PostHogProvider } from "./providers";
+import { PostHogProvider } from "../providers/PostHogProvider";
 import dynamic from "next/dynamic";
+import { ThemeProvider } from "@/providers/ThemeProvider";
 
 const PostHogPageView = dynamic(() => import("../components/PostHogPageView"), {
   ssr: false,
@@ -28,15 +29,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <PostHogProvider>
-        <body
-          className={cn(
-            "min-h-screen bg-background font-sans antialiased",
-            fontSans.variable
-          )}
-        >
-          <PostHogPageView />
-          {children}
-        </body>
+        <ThemeProvider attribute="class">
+          <body
+            className={cn(
+              "min-h-screen bg-background font-sans antialiased",
+              fontSans.variable
+            )}
+          >
+            <PostHogPageView />
+            {children}
+          </body>
+        </ThemeProvider>
       </PostHogProvider>
     </html>
   );
