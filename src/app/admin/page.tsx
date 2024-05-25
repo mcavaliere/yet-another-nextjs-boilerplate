@@ -1,4 +1,3 @@
-import { Heading } from "@/components/Heading";
 import { TestButton } from "./TestButton";
 
 export default function AdminDashboard() {
@@ -6,9 +5,7 @@ export default function AdminDashboard() {
     <>
       <hr />
 
-      <Heading size="h2" tagName="h2">
-        Transactional Email
-      </Heading>
+      <h2 className="h2 mb-4">Transactional Email</h2>
 
       <TestButton />
     </>

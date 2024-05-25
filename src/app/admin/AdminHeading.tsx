@@ -1,13 +1,9 @@
-import { Heading } from "@/components/Heading";
-
 export function AdminHeading() {
   return (
     <>
-      <Heading size="h1" tagName="h1">
-        Admin Dashboard
-      </Heading>
+      <h1 className="h1 mb-4">Admin Dashboard</h1>
 
-      <p>Admin-only features can be placed here.</p>
+      <p className="mb-4">Admin-only features can be placed here.</p>
     </>
   );
 }

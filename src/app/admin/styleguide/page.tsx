@@ -1,4 +1,3 @@
-import { Heading } from "@/components/Heading";
 import { Separator } from "@/components/ui/separator";
 import { ReactNode } from "react";
 
@@ -12,9 +11,7 @@ export default function StyleGuide() {
   return (
     <>
       <section className="mb-8">
-        <Heading size="h1" tagName="h1">
-          Styleguide
-        </Heading>
+        <h1 className="h1 mb-4">Styleguide</h1>
 
         <p>
           Our shared, styled elements can be seen here at a glance with all of
@@ -26,6 +23,11 @@ export default function StyleGuide() {
 
       <section className="mb-8">
         <h1 className="h1 mb-4">Headings</h1>
+
+        <p className="mb-4">
+          Headings have no styles by default; we add `.h1`...`.h6` classes to
+          style them independently, while preserving semantic meaning.
+        </p>
 
         <Well>
           <h1 className="h1">Heading 1</h1>

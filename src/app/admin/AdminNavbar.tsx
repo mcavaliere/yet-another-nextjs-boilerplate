@@ -11,7 +11,7 @@ import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import Link from "next/link";
 export function AdminNavbar() {
   return (
-    <NavigationMenu>
+    <NavigationMenu className="mb-4 bg-secondary">
       <NavigationMenuList>
         <NavigationMenuItem>
           <Link href="/admin" passHref>
