@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ReactNode } from "react";
 
@@ -22,7 +23,7 @@ export default function StyleGuide() {
       <Separator className="mb-8" />
 
       <section className="mb-8">
-        <h1 className="h1 mb-4">Colors</h1>
+        <h2 className="h2 mb-2">Custom Colors</h2>
 
         <ul className="flex flex-row flex-wrap">
           {[
@@ -37,6 +38,7 @@ export default function StyleGuide() {
             "muted",
             "accent",
             "popover",
+            "card",
           ].map((color) => (
             <li key={color} className={`block mb-4 bg-${color} w-28 h-28`}>
               {color}
@@ -46,7 +48,7 @@ export default function StyleGuide() {
       </section>
 
       <section className="mb-8">
-        <h1 className="h1 mb-4">Headings</h1>
+        <h2 className="h2 mb-2">Headings</h2>
 
         <p className="mb-4">
           Headings have no styles by default; we add `.h1`...`.h6` classes to
@@ -61,6 +63,24 @@ export default function StyleGuide() {
           <h5 className="h5">Heading 5</h5>
           <h6 className="h6">Heading 6</h6>
         </Well>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="h2 mb-2">Buttons</h2>
+
+        <div className="flex items-center gap-4 mb-3">
+          <Button>Primary</Button>
+          <Button variant="secondary">Secondary</Button>
+          <Button variant="ghost">Ghost</Button>
+          <Button variant="link">Link</Button>
+        </div>
+
+        <div className="flex items-center gap-4">
+          <Button size="default">Default size</Button>
+          <Button size="sm">sm</Button>
+          <Button size="lg">lg</Button>
+          <Button size="icon">icon</Button>
+        </div>
       </section>
 
       <Separator className="mb-8" />
