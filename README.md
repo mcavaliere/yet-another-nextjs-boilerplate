@@ -10,6 +10,7 @@ A boilerplate for myself containing the tools I use the most; I'm not sure which
 - [Prisma ORM](https://www.prisma.io/) with [PostgreSQL](https://www.postgresql.org/) database
 - [Clerk](https://clerk.com/) for authentication and user management
 - [PostHog](https://posthog.com/) for product and website analytics
+- [Amazon SES](https://aws.amazon.com/ses/) and [JSX Email](https://jsx.email/) for transactional emails
 - [Sentry](https://sentry.io/) for error and performance monitoring
 - [Vitest](https://vitest.dev/) and [React Testing Library](https://testing-library.com/) for unit tests.
 - [Playwright](https://playwright.dev/) for E2E tests.
@@ -21,7 +22,7 @@ A boilerplate for myself containing the tools I use the most; I'm not sure which
 - [x] Add Sentry
 - [x] Add Shadcn-ui
 - [x] Add an ORM
-- [ ] Add transactional emails & `jsx-email`
+- [x] Add transactional emails & `jsx-email`
 - [x] Add Authentication
 - [ ] Add object storage
 - [x] Add Vitest
