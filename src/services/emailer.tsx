@@ -51,11 +51,11 @@ export async function sendWelcomeEmail(firstName: string, email: string) {
   });
 }
 
-/*
-  Sends an email using either SES or Nodemailer.
-  In development, it uses Nodemailer to trap and test transactional emails with maildev.
-  In production, it uses SES to send the emails.
-*/
+/**
+ * Sends an email using either SES or Nodemailer.
+ * In development, it uses Nodemailer to trap and test transactional emails with maildev.
+ * In production, it uses SES to send the emails.
+ */
 export async function sendEmail({
   subject,
   html,
