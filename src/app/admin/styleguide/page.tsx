@@ -22,6 +22,30 @@ export default function StyleGuide() {
       <Separator className="mb-8" />
 
       <section className="mb-8">
+        <h1 className="h1 mb-4">Colors</h1>
+
+        <ul className="flex flex-row flex-wrap">
+          {[
+            "border",
+            "input",
+            "ring",
+            "background",
+            "foreground",
+            "primary",
+            "secondary",
+            "destructive",
+            "muted",
+            "accent",
+            "popover",
+          ].map((color) => (
+            <li key={color} className={`block mb-4 bg-${color} w-28 h-28`}>
+              {color}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="mb-8">
         <h1 className="h1 mb-4">Headings</h1>
 
         <p className="mb-4">
