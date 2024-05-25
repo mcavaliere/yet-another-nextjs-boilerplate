@@ -52,6 +52,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ```
 
+## Transactional Email
+
+[Amazon SES](https://aws.amazon.com/ses/) is the transactional email provider. In development we fallback to [nodemailer](https://www.nodemailer.com/) for sending so that we can test the output locally with [MailDev](https://github.com/maildev/maildev).
+
+Run `pnpm maildev` in another terminal and view `http://0.0.0.0:1080/` in your browser. In another browser tab you can visit `http://localhost:3000/test` to send a test email, and see it show up in MailDev.
+
 ## Running E2E Tests
 
 1. `pnpm build:test` to create a production build (with NODE_ENV=test)
