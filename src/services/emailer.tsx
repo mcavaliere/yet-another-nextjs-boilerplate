@@ -17,15 +17,19 @@ const logger = {
 
 // Use nodemailer in dev, so we can trap and test transactional email easily.
 if (process.env.NODE_ENV === "development") {
-  const nodemailer = await import("nodemailer");
-  transporter = nodemailer.createTransport({
-    host: "0.0.0.0",
-    port: 1025,
-    secure: false, // true for 465, false for other ports
-    ignoreTLS: true, // do not fail on invalid certs
-    tls: {
-      rejectUnauthorized: false,
-    },
+  // Use dynamic import to load nodemailer only in development.
+  // Note that we use .then syntax since Next.js still has issues with top-level await.
+  //  https://github.com/vercel/next.js/issues/54282
+  import("nodemailer").then((nodemailer) => {
+    transporter = nodemailer.createTransport({
+      host: "0.0.0.0",
+      port: 1025,
+      secure: false, // true for 465, false for other ports
+      ignoreTLS: true, // do not fail on invalid certs
+      tls: {
+        rejectUnauthorized: false,
+      },
+    });
   });
 } else {
   ses = new SES({ region: "us-east-2", logger: logger });
