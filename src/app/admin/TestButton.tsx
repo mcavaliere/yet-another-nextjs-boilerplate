@@ -24,5 +24,5 @@ export function TestButton() {
       console.error(error);
     }
   }
-  return <Button onClick={onClick}>Click me</Button>;
+  return <Button onClick={onClick}>Send a test email</Button>;
 }

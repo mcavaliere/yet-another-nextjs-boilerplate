@@ -1,16 +1,12 @@
 import { checkRole } from "@/lib/permissions";
 import { redirect } from "next/navigation";
+import { type ReactNode } from "react";
 
-export default function AdminDashboard() {
+export default function AdminLayout({ children }: { children: ReactNode }) {
   // If the user does not have the admin role, redirect them to the home page
   if (!checkRole("admin")) {
     redirect("/");
   }
 
-  return (
-    <>
-      <h1>This is the admin dashboard</h1>
-      <p>This page is restricted to users with the 'admin' role.</p>
-    </>
-  );
+  return <>{children}</>;
 }
