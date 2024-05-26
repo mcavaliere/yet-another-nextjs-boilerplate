@@ -11,7 +11,7 @@ function Well({ children }: { children: ReactNode }) {
 
 export default function StyleGuide() {
   return (
-    <>
+    <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
       <section className="mb-8">
         <h1 className="h1 mb-4">Styleguide</h1>
 
@@ -101,6 +101,6 @@ export default function StyleGuide() {
       </section>
 
       <Separator className="mb-8" />
-    </>
+    </div>
   );
 }
