@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ReactNode } from "react";
+import { tailwindConfig } from "~/tailwind.config";
 
 function Well({ children }: { children: ReactNode }) {
   return (
@@ -26,24 +27,40 @@ export default function StyleGuide() {
         <h2 className="h2 mb-2">Custom Colors</h2>
 
         <ul className="flex flex-row flex-wrap">
-          {[
-            "border",
-            "input",
-            "ring",
-            "background",
-            "foreground",
-            "primary",
-            "secondary",
-            "destructive",
-            "muted",
-            "accent",
-            "popover",
-            "card",
-          ].map((color) => (
-            <li key={color} className={`block mb-4 bg-${color} w-28 h-28`}>
-              {color}
-            </li>
-          ))}
+          {Object.entries(tailwindConfig.theme.extend.colors).map(
+            ([color, value]) => {
+              if (typeof value === "string") {
+                return (
+                  <li key={color} className={`grid grid-rows-2 mb-4 w-28 h-28`}>
+                    <span className={`block w-28 h-28 bg-${color} p-2`}>
+                      {color}
+                    </span>
+                  </li>
+                );
+              }
+
+              if (typeof value === "object") {
+                return (
+                  <li key={color} className={`grid grid-rows-2 mb-4 w-28 h-28`}>
+                    {Object.keys(value).map((key) => {
+                      const prefix = key === "foreground" ? "text-" : `bg-`;
+                      const suffix = key === "DEFAULT" ? "" : `-${key}`;
+
+                      return (
+                        <span
+                          key={key}
+                          className={`block w-28 h-14 ${prefix}${color}${suffix} p-2`}
+                        >
+                          {color}
+                          {suffix}
+                        </span>
+                      );
+                    })}
+                  </li>
+                );
+              }
+            }
+          )}
         </ul>
       </section>
 
