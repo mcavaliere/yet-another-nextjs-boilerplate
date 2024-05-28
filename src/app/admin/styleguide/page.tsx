@@ -24,47 +24,6 @@ export default function StyleGuide() {
       <Separator className="mb-8" />
 
       <section className="mb-8">
-        <h2 className="h2 mb-2">Custom Colors</h2>
-
-        <ul className="flex flex-row flex-wrap">
-          {Object.entries(tailwindConfig.theme.extend.colors).map(
-            ([color, value]) => {
-              if (typeof value === "string") {
-                return (
-                  <li key={color} className={`grid grid-rows-2 mb-4 w-28 h-28`}>
-                    <span className={`block w-28 h-28 bg-${color} p-2`}>
-                      {color}
-                    </span>
-                  </li>
-                );
-              }
-
-              if (typeof value === "object") {
-                return (
-                  <li key={color} className={`grid grid-rows-2 mb-4 w-28 h-28`}>
-                    {Object.keys(value).map((key) => {
-                      const prefix = key === "foreground" ? "text-" : `bg-`;
-                      const suffix = key === "DEFAULT" ? "" : `-${key}`;
-
-                      return (
-                        <span
-                          key={key}
-                          className={`block w-28 h-14 ${prefix}${color}${suffix} p-2`}
-                        >
-                          {color}
-                          {suffix}
-                        </span>
-                      );
-                    })}
-                  </li>
-                );
-              }
-            }
-          )}
-        </ul>
-      </section>
-
-      <section className="mb-8">
         <h2 className="h2 mb-2">Headings</h2>
 
         <p className="mb-4">
