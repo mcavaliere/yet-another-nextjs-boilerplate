@@ -9,6 +9,7 @@ import "./globals.css";
 import "./landing.css";
 import { SITE_NAME } from "@/lib/constants";
 import { Toaster } from "@/components/ui/toaster";
+import { Navbar } from "../components/Navbar";
 
 const PostHogPageView = dynamic(() => import("../components/PostHogPageView"), {
   ssr: false,
@@ -41,6 +42,7 @@ export default function RootLayout({
           >
             <PostHogPageView />
             <ThemeProvider attribute="class">
+              <Navbar />
               {children}
               <Toaster />
             </ThemeProvider>
