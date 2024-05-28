@@ -15,16 +15,6 @@ import {
   Upload,
   Users2,
 } from "lucide-react";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
-
-import Image from "next/image";
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
@@ -44,17 +34,11 @@ export function AdminNavbar() {
     <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6">
       <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
         <Link
-          href="/"
+          href="/admin"
           className="flex items-center gap-2 text-lg font-semibold md:text-base"
         >
           <Home className="h-6 w-6" />
-          <span className="sr-only">Home</span>
-        </Link>
-        <Link
-          href="/admin"
-          className="text-foreground transition-colors hover:text-foreground"
-        >
-          Admin Dashboard
+          <span className="sr-only">Admin Home</span>
         </Link>
         <Link
           href="/admin/styleguide"
@@ -63,22 +47,10 @@ export function AdminNavbar() {
           Styleguide
         </Link>
         <Link
-          href="/testing"
+          href="/admin/utils"
           className="text-muted-foreground transition-colors hover:text-foreground"
         >
-          Testing Utils
-        </Link>
-        <Link
-          href="#"
-          className="text-muted-foreground transition-colors hover:text-foreground"
-        >
-          Customers
-        </Link>
-        <Link
-          href="#"
-          className="text-muted-foreground transition-colors hover:text-foreground"
-        >
-          Analytics
+          Utils
         </Link>
       </nav>
       <Sheet>
@@ -91,38 +63,20 @@ export function AdminNavbar() {
         <SheetContent side="left">
           <nav className="grid gap-6 text-lg font-medium">
             <Link
-              href="#"
+              href="/admin"
               className="flex items-center gap-2 text-lg font-semibold"
             >
               <Home className="h-6 w-6" />
-              <span className="sr-only">Acme Inc</span>
+              <span className="sr-only">Admin Home</span>
             </Link>
-            <Link href="#" className="hover:text-foreground">
-              Dashboard
-            </Link>
-            <Link
-              href="#"
-              className="text-muted-foreground hover:text-foreground"
-            >
-              Orders
+            <Link href="/admin/styleguide" className="hover:text-foreground">
+              Styleguide
             </Link>
             <Link
-              href="#"
+              href="/admin/utils"
               className="text-muted-foreground hover:text-foreground"
             >
-              Products
-            </Link>
-            <Link
-              href="#"
-              className="text-muted-foreground hover:text-foreground"
-            >
-              Customers
-            </Link>
-            <Link
-              href="#"
-              className="text-muted-foreground hover:text-foreground"
-            >
-              Analytics
+              Utils
             </Link>
           </nav>
         </SheetContent>
