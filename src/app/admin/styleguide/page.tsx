@@ -1,6 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ReactNode } from "react";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "~/src/components/ui/card";
 import { tailwindConfig } from "~/tailwind.config";
 
 function Well({ children }: { children: ReactNode }) {
@@ -27,8 +34,9 @@ export default function StyleGuide() {
         <h2 className="h2 mb-2">Headings</h2>
 
         <p className="mb-4">
-          Headings have no styles by default; we add `.h1`...`.h6` classes to
-          style them independently, while preserving semantic meaning.
+          Headings have no styles by default; we add <code>.h1</code>...
+          <code>.h6</code> classes to style them independently, while preserving
+          semantic meaning.
         </p>
 
         <Well>
@@ -60,6 +68,64 @@ export default function StyleGuide() {
       </section>
 
       <Separator className="mb-8" />
+
+      <section className="mb-8">
+        <h2 className="h2 mb-2">Cards</h2>
+
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+          <Card>
+            <CardHeader>
+              <CardTitle>et illo necessitatibus</CardTitle>
+            </CardHeader>
+
+            <CardContent>
+              Accusantium et distinctio ratione mollitia ut sed voluptates
+              nulla. Aliquid necessitatibus sit. Sint velit iste recusandae
+              necessitatibus officiis.
+            </CardContent>
+
+            <CardFooter>
+              <Button variant="secondary">ea sit nihil</Button>
+            </CardFooter>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>qui optio commodi</CardTitle>
+            </CardHeader>
+
+            <CardContent>
+              Culpa sed alias veniam architecto nobis et ea. Voluptatem ipsam
+              dolore recusandae odio non quo dicta deleniti. Et ut omnis
+              quisquam incidunt sunt laborum quia sit. Voluptas labore
+              voluptatem minima eum vero eaque dicta. Quam quod autem alias eum
+              unde et quis vel. Non consequatur quod voluptas voluptas
+              voluptates earum aliquid.
+            </CardContent>
+
+            <CardFooter>
+              <Button variant="secondary">repellat atque aut</Button>
+            </CardFooter>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>quos aliquid fuga</CardTitle>
+            </CardHeader>
+
+            <CardContent>
+              Aut et sint. Laudantium dolor nostrum dolore deleniti dolorum
+              facere. Consequatur consectetur suscipit corporis rerum. Odit
+              possimus qui consequatur vero dolor doloribus. Blanditiis qui
+              laborum necessitatibus provident ab nihil omnis.
+            </CardContent>
+
+            <CardFooter>
+              <Button variant="secondary">qui ut et</Button>
+            </CardFooter>
+          </Card>
+        </div>
+      </section>
     </div>
   );
 }
